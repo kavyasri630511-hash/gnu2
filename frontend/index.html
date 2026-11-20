@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5ef" />
+    <meta name="description" content="Find your next event and save your spot." />
+    <title>Gather — find your people</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Gather home">
+        <span class="brand-mark" aria-hidden="true">g</span>
+        <span>gather<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-active" href="#events">Discover</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <a class="header-cta" href="#events">Find an event <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> GOOD THINGS HAPPEN TOGETHER</p>
+          <h1 id="hero-title">Make room<br />for <span>something good.</span></h1>
+          <p class="hero-text">A little out of the ordinary. A lot better together.<br class="desktop-break" /> Find an event that feels like your kind of thing.</p>
+          <a class="button button-dark" href="#events">Explore events <span aria-hidden="true">↓</span></a>
+          <div class="hero-note"><span class="note-spark" aria-hidden="true">✳</span><span>Show up curious.<br /><strong>Leave with a story.</strong></span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-sun"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-sticker sticker-top">GOOD<br />ENERGY <span>✳</span></div>
+          <div class="art-silhouette person-one"><i></i><b></b></div>
+          <div class="art-silhouette person-two"><i></i><b></b></div>
+          <div class="art-silhouette person-three"><i></i><b></b></div>
+          <div class="art-ground"></div>
+          <div class="art-sticker sticker-bottom"><span>↗</span> YOUR NEXT<br />FAVORITE DAY</div>
+          <div class="art-squiggle">〰</div>
+        </div>
+      </section>
+
+      <section class="event-section" id="events" aria-labelledby="events-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE GOOD STUFF</p>
+            <h2 id="events-title">Find your next <span>yes.</span></h2>
+          </div>
+          <div class="event-count" id="event-count" aria-live="polite">Loading events…</div>
+        </div>
+
+        <div class="event-tools">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Search events</span>
+            <input id="search" type="search" placeholder="Search by event name" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <label class="status-filter">Show
+            <select id="status-filter" aria-label="Filter events by status">
+              <option value="all">All events</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="notice" id="notice" role="status" hidden></div>
+        <div class="event-grid" id="event-grid" aria-live="polite" aria-busy="true"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">✳</span>
+          <h3>No events found</h3>
+          <p>Try another search or check back soon for new plans.</p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-stamp" aria-hidden="true">✳</div>
+        <div><p class="eyebrow">NO BIG PRODUCTION</p><h2>Pick a plan.<br /><span>Show up.</span></h2></div>
+        <p class="how-copy">Find an event that sparks your interest, save your spot, and let the rest take care of itself. Your next good day is closer than you think.</p>
+        <a class="button button-light" href="#events">See what’s on <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">g</span><span>gather<span class="brand-dot">.</span></span></a>
+      <p>Made for getting out there.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
